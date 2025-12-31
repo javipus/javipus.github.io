@@ -3,46 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name</title>
+  <title>Javier Prieto — Minimalist Personal Site</title>
   <style>
-    body {
-      font-family: sans-serif;
-      max-width: 650px;
-      margin: 50px auto;
-      padding: 0 20px;
-      color: #333;
-      line-height: 1.5;
+    :root {
+      color-scheme: light;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --accent: #0f172a;
+      --border: #e5e7eb;
+      --bg: #ffffff;
     }
 
-    footer {
-      margin-top: 50px;
-      padding-top: 10px;
-      border-top: 1px solid #ddd;
-      font-size: 0.9em;
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    main {
+      display: grid;
+      gap: 32px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    section {
+      display: grid;
+      gap: 16px;
+    }
+
+    .tagline {
+      font-size: 1.15rem;
+      color: var(--accent);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
     a {
-      color: #0066cc;
+      color: var(--accent);
       text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
     }
 
     a:hover {
-      text-decoration: underline;
+      border-color: var(--accent);
+    }
+
+    footer {
+      margin-top: 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.95rem;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
 
-  <h1>hey, this is a title</h1>
-  <p>
-    and this is my bio.
-  </p>
+  <main>
+    <header>
+      <h1>Javier Prieto</h1>
+      <p class="tagline">Researcher · Builder · Learning in public</p>
+      <p>
+        I focus on creating simple, thoughtful experiences around forecasting, AI,
+        and decision-making. I care about clarity, calm interfaces, and continuous
+        curiosity.
+      </p>
+    </header>
+
+    <section>
+      <h2>Now</h2>
+      <p>
+        Currently exploring long-term forecasting tools, writing about reliable
+        reasoning, and building small products that help people think better.
+      </p>
+    </section>
+
+    <section>
+      <h2>Connect</h2>
+      <div class="links">
+        <a href="https://twitter.com/2e10e122">Twitter</a>
+        <a href="https://github.com/javipus">GitHub</a>
+        <a href="https://linkedin.com/in/javier-prieto-29561421b">LinkedIn</a>
+        <a href="https://www.metaculus.com/accounts/profile/103600/">Metaculus</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <a href="https://twitter.com/2e10e122">Twitter</a> |
-    <a href="https://github.com/javipus">GitHub</a> |
-    <a href="https://linkedin.com/in/javier-prieto-29561421b">LinkedIn</a> |
-    <a href="https://www.metaculus.com/accounts/profile/103600/">Metaculus</a>
+    <span>Based in Madrid · Always open to thoughtful collaborations</span>
   </footer>
 
 </body>
