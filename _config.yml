@@ -1,0 +1,23 @@
+title: Javier Prieto
+url: "https://benevolentknowledge.com"
+baseurl: ""
+
+markdown: kramdown
+permalink: /blog/:slug/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
