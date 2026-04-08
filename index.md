@@ -3,9 +3,15 @@ layout: default
 title: ""
 ---
 
-Hi, I'm Javi.
+<ul class="post-list">
+{% for post in site.posts %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+  </li>
+{% endfor %}
+</ul>
 
-[Twitter](https://twitter.com/2e10e122) ·
-[GitHub](https://github.com/javipus) ·
-[LinkedIn](https://linkedin.com/in/javier-prieto-29561421b) ·
-[Metaculus](https://www.metaculus.com/accounts/profile/103600/)
+{% if site.posts.size == 0 %}
+Nothing here yet.
+{% endif %}
